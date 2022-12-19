@@ -3,9 +3,16 @@ const loginBtn = document.getElementById('login');
 
 function loginArea() {
     const loginArea = document.getElementById('login-area');
-    loginArea.style.display = 'none';
-    const transictionArea = document.getElementById('transiction-area');
-    transictionArea.style.display = 'block';
+    const login = document.getElementById('locker');
+    const loginPass = login.value;
+    if (loginPass == 1234) {
+        loginArea.style.display = 'none';
+
+        const transictionArea = document.getElementById('transiction-area');
+        transictionArea.style.display = 'block';
+    } else {
+        alert('This Password is Incurrect')
+    }
 }
 loginBtn.addEventListener('click', loginArea);
 
